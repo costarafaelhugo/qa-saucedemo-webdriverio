@@ -42,7 +42,7 @@ wdio.conf.js
 - Hooks para setup/teardown e captura de evidências.
 
 
-2. Perguntas de Cenários da automação
+## 2. Perguntas de Cenários da automação
 1. O que faria se o teste falhasse de forma intermitente?
 Primeiro, identificaria o padrão da falha: se é ambiente, dados ou código. Testes intermitentes são mais perigosos que bugs comuns porque minam a confiança da automação. Aplicaria logs detalhados, screenshots e registros do ambiente para diagnosticar a causa. Se for um flaky test, priorizo a estabilização do teste ou isolo ele até que seja corrigido. Nunca ignoraria a falha.
 
