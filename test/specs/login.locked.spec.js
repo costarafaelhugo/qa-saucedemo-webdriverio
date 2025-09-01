@@ -6,8 +6,9 @@ describe('Login - Usuário Bloqueado', () => {
         await LoginPage.login('locked_out_user', 'secret_sauce');
 
         await LoginPage.errorMessage.waitForDisplayed();
-        await expect(LoginPage.errorMessage).toHaveTextContaining(
-            'Epic sadface: Sorry, this user has been locked out.'
-        );
+        
+       
+        const errorText = await LoginPage.errorMessage.getText();
+        await expect(errorText).toContain('Sorry, this user has been locked out.');
     });
 });

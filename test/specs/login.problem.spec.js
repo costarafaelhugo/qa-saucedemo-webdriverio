@@ -13,7 +13,11 @@ describe('Login - Usuário Problemático', () => {
             }
         );
 
-        await expect(browser).toHaveUrlContaining('inventory.html');
+        // Sintaxe correta do WebdriverIO - Opção 1
+        const currentUrl = await browser.getUrl();
+        await expect(currentUrl).toContain('inventory.html');
+        
         // Observação: este usuário apresenta imagens quebradas propositalmente.
+        console.log('⚠️ Usuário problemático logado - imagens podem estar quebradas');
     });
 });

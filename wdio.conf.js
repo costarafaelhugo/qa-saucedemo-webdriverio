@@ -9,8 +9,8 @@ exports.config = {
     // ==================
     // Specify Test Files
     // ==================
-    specs: [
-        './tests/specs/**/*.js'
+  specs: [
+    './test/specs/**/*.spec.js'  // Apenas arquivos que terminam com .spec.js
     ],
     exclude: [
         // 'path/to/excluded/files'
