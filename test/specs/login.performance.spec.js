@@ -23,6 +23,8 @@ describe('Login - Performance Glitch', () => {
             console.warn('⚠️ Login demorou mais que o esperado (> 5s)');
         }
 
-        await expect(browser).toHaveUrlContaining('inventory.html');
+
+        const currentUrl = await browser.getUrl();
+        await expect(currentUrl).toContain('inventory.html');
     });
 });
